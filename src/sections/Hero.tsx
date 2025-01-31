@@ -6,8 +6,14 @@ import grainImage from '@/assets/images/grain.jpg'
 export const HeroSection = () => {
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0" >
-      <div className="absolute inset-0" style={{
-         backgroundImage: `url(${grainImage.src})`}}>
+      <div className="absolute inset-0 -z-30 opacity-5 " style={{
+        backgroundImage: `url(${grainImage.src})`}}>
+        </div>
+        <div className=" size-[620px] hero-ring"></div>
+        <div className=" size-[820px] hero-ring"></div>
+        <div className=" size-[1020px] hero-ring"></div>
+        <div className=" size-[1220px] hero-ring"></div>
+      <div className="container">
         <div className="flex flex-col items-center">
           <Image
             src={memojiImage}
