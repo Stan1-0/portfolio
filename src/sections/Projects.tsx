@@ -1,19 +1,20 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
+import YOSA from "@/assets/images/YOSA.png"
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import Image from "next/image";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "YOSA",
+    year: "2024",
+    title: "Orphange website",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://yosa.netlify.app/",
+    image: YOSA,
   },
   {
     company: "Innovative Co",
@@ -42,5 +43,34 @@ const portfolioProjects = [
 ];
 
 export const ProjectsSection = () => {
-  return <div>Projects Section</div>;
+  return (
+  <div>
+    <div className="container">
+      <p>Real-world Results</p>
+      <h2>Featured Projects</h2>
+      <p>A few of the projects I've worked, both personal and professional</p>
+      <div>
+        {portfolioProjects.map((project) => (
+          <div key={project.title}>
+            <div>
+              <span>{project.company}</span>
+              <span>{project.year}</span>
+            </div>
+            <h3>{project.title}</h3>
+            <hr/>
+            <ul>
+              {project.results.map(result => (
+                <li>{result.title}</li>
+              ))}
+            </ul>
+            <a href={project.link}>
+            <button>View Live Site</button>
+            </a>
+            <Image src={project.image} alt={project.title}/>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+  )
 };
