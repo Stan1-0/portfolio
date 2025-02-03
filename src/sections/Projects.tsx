@@ -10,11 +10,11 @@ const portfolioProjects = [
   {
     company: "YOSA",
     year: "2024",
-    title: "Orphange website",
+    title: "Orphanage website",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Developed Yosa, a full-stack web app with admin-controlled image uploads and dynamic content management." },
+      { title: "Integrated Paystack, enabling secure payments and seamless transactions." },
+      { title: "Optimized frontend-backend communication, enhancing scalability and user experience." },
     ],
     link: "https://yosa.netlify.app/",
     image: YOSA,
@@ -102,7 +102,7 @@ export const ProjectsSection = () => {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0"
+                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
                   />
                 </div>
               </div>
