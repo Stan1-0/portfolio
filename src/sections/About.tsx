@@ -99,17 +99,27 @@ export const AboutSection = () => {
         />
         <div className="mt-20">
           <Card className="h-[320px]">
-            <CardHeader title="My reads" description="Explore the books that shape my" />
+            <CardHeader
+              title="My reads"
+              description="Explore the books that shape my"
+            />
             <div className="w-40 mx-auto mt-8">
-            <Image src={bookImage} alt="Book cover " />
+              <Image src={bookImage} alt="Book cover " />
             </div>
           </Card>
-          <Card>
-          <CardHeader title="My toolbox" description="Explore the technologies and tools I use" />
+          <Card className="h-[320px] p-0">
+            <CardHeader
+              title="My toolbox"
+              description="Explore the technologies and tools I use"
+              className="px-6 pt-6"
+            />
             <ToolboxItems items={toolboxItems} />
           </Card>
           <Card>
-          <CardHeader title="Beyond the code" description="Explore my interest and hobbies beyond the digital realm" />
+            <CardHeader
+              title="Beyond the code"
+              description="Explore my interest and hobbies beyond the digital realm"
+            />
             <div>
               {hobbies.map((hobby) => (
                 <div key={hobby.title}>
