@@ -4,35 +4,60 @@ import { SectionHeader } from "@/components/SectionHeader";
 import StarIcon from "@/assets/icons/star.svg"
 import bookImage from "@/assets/images/book-cover.png"
 import JavaScriptIcon from '@/assets/icons/square-js.svg'
+import CSSIcon from '@/assets/icons/css3.svg'
+import ReactIcon from '@/assets/icons/react.svg'
+import ChromeIcon from '@/assets/icons/chrome.svg'
+import GithubIcon from '@/assets/icons/github.svg'
+import DjangoIcon from '@/assets/icons/django.svg'
+import PythonIcon from '@/assets/icons/python.svg'
+import Postman from '@/assets/icons/postman.svg'
+import { TechIcon } from "@/components/Techicon";
 
 const toolboxItems = [
   {
-    title: 'Python',
-    icon: ''
-  },
-  {
-    title: 'Javascipt',
-    icon: ''
-  },
-  {
-    title: 'Django',
-    icon: ''
-  },
-  {
-    title: 'React',
-    icon: ''
-  },
-  {
-    title: 'ReactNative',
-    icon: ''
-  },
-  {
-    title: 'Postman',
-    icon: ''
-  },
-  {
+    id: 1,
     title: 'Github',
-    icon: ''
+    iconType: GithubIcon ,
+  },
+  {
+    id: 2,
+    title: 'Javascipt',
+    iconType: JavaScriptIcon ,
+  },
+  {
+    id: 3,
+    title: 'React',
+    iconType: ReactIcon ,
+  },
+  {
+    id: 4,
+    title: 'Python',
+    iconType: PythonIcon 
+  },
+  {
+    id: 5,
+    title: 'Django',
+    iconType: DjangoIcon 
+  },
+  {
+    id: 6,
+    title: 'ReactNative',
+    iconType: ReactIcon 
+  },
+  {
+    id: 7,
+    title: 'Postman',
+    iconType: Postman 
+  },
+  {
+    id: 8,
+    title: 'CSS',
+    iconType: CSSIcon 
+  },
+  {
+    id: 9,
+    title: 'Chrome',
+    iconType: ChromeIcon 
   },
 ]
 
@@ -59,7 +84,13 @@ export const AboutSection = () => {
         <p> Explore the technologies and tools I use</p>
       </div>
       <div>
+        {toolboxItems.map(item => (
+          <div key={item.id}>
+            <TechIcon component={item.iconType} />
+            <span>{item.title}</span>
 
+          </div>
+        ))}
       </div>
     </Card>
     </div>

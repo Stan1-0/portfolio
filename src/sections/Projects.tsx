@@ -9,37 +9,40 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 const portfolioProjects = [
   {
+    id: 1,
     company: "YOSA",
     year: "2024",
     title: "Orphanage website",
     results: [
-      { title: "Developed Yosa, a full-stack web app with admin-controlled image uploads and dynamic content management." },
-      { title: "Integrated Paystack, enabling secure payments and seamless transactions." },
-      { title: "Optimized frontend-backend communication, enhancing scalability and user experience." },
+      { id: 1, title: "Developed Yosa, a full-stack web app with admin-controlled image uploads and dynamic content management." },
+      { id: 2, title: "Integrated Paystack, enabling secure payments and seamless transactions." },
+      { id: 3, title: "Optimized frontend-backend communication, enhancing scalability and user experience." },
     ],
     link: "https://yosa.netlify.app/",
     image: YOSA,
   },
   {
+    id: 2,
     company: "Innovative Co",
     year: "2021",
     title: "Light Saas Landing Page",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { id: 1, title: "Boosted sales by 20%" },
+      { id: 2, title: "Expanded customer reach by 35%" },
+      { id: 3, title: "Increased brand awareness by 15%" },
     ],
     link: "https://youtu.be/7hi5zwO75yc",
     image: lightSaasLandingPage,
   },
   {
+    id: 3,
     company: "Quantum Dynamics",
     year: "2023",
     title: "AI Startup Landing Page",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { id: 1, title: "Enhanced user experience by 40%" },
+      { id: 2, title: "Improved site speed by 50%" },
+      { id: 3, title: "Increased mobile traffic by 35%" },
     ],
     link: "https://youtu.be/Z7I5uSRHMHg",
     image: aiStartupLandingPage,
@@ -52,9 +55,9 @@ export const ProjectsSection = () => {
       <div className="container">
         <SectionHeader eyebrow="Real-world Results" title="Featured Projects" description=" A few of the projects I've worked, both personal and professional" />
         <div className="mt-10 md:mt-20 flex flex-col gap-20">
-          {portfolioProjects.map((project, index) => (
+          {portfolioProjects.map((project) => (
             <div
-              key={project.title || index}
+              key={project.id} // Updated to use the unique id for the key
               className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none"
             >
               <div
@@ -76,7 +79,7 @@ export const ProjectsSection = () => {
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
                   <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                     {project.results.map((result) => (
-                      <li className="flex gap-2 text-sm md:text-base text-white/50 ">
+                      <li key={result.id} className="flex gap-2 text-sm md:text-base text-white/50 ">
                         <CheckCircleIcon className="size-5 md:size-6" />
                         <span>{result.title}</span>
                       </li>
