@@ -14,6 +14,7 @@ import Postman from "@/assets/icons/postman.svg";
 import { TechIcon } from "@/components/Techicon";
 import mapImage from "@/assets/images/map.png";
 import smileMemojji from "@/assets/images/memoji-smile.png";
+import { CardHeader } from "@/components/CardHeader";
 
 const toolboxItems = [
   {
@@ -88,55 +89,47 @@ const hobbies = [
 
 export const AboutSection = () => {
   return (
-    <div className="pb-96">
-      <SectionHeader
-        eyebrow="About Me"
-        title="A Glimpse into my world"
-        description="Learn more about who I am, what I do, and what inspires me"
-      />
-      <div>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>My Reads</h3>
-            <p> Explore the books shaping my perspective</p>
-          </div>
-          <Image src={bookImage} alt="Book cover " />
-        </Card>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>My toolbox</h3>
-            <p> Explore the technologies and tools I use</p>
-          </div>
-          <div>
-            {toolboxItems.map((item) => (
-              <div key={item.id}>
-                <TechIcon component={item.iconType} />
-                <span>{item.title}</span>
-              </div>
-            ))}
-          </div>
-        </Card>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>Beyond the code</h3>
-            <p> Explore my interest and hobbies beyond the digital realm</p>
-          </div>
-          <div>
-            {hobbies.map((hobby) => (
-              <div key={hobby.title}>
-                <span>{hobby.title}</span>
-                <span>{hobby.emoji}</span>
-              </div>
-            ))}
-          </div>
-        </Card>
-        <Card>
-          <Image src={mapImage} alt="map" />
-          <Image src={smileMemojji} alt="smiling memoji" />
-        </Card>
+    <div className="py-20">
+      <div className="container">
+        <SectionHeader
+          eyebrow="About Me"
+          title="A Glimpse into my world"
+          description="Learn more about who I am, what I do, and what inspires me"
+        />
+        <div className="mt-20">
+          <Card className="h-[320px]">
+            <CardHeader title="My reads" description="Explore the books that shape my" />
+            <div className="w-40 mx-auto mt-8">
+            <Image src={bookImage} alt="Book cover " />
+            </div>
+          </Card>
+          <Card>
+          <CardHeader title="My toolbox" description="Explore the technologies and tools I use" />
+            <div>
+              {toolboxItems.map((item) => (
+                <div key={item.id} className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg">
+                  <TechIcon component={item.iconType} />
+                  <span className="font-semibold">{item.title}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+          <Card>
+          <CardHeader title="Beyond the code" description="Explore my interest and hobbies beyond the digital realm" />
+            <div>
+              {hobbies.map((hobby) => (
+                <div key={hobby.title}>
+                  <span>{hobby.title}</span>
+                  <span>{hobby.emoji}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+          <Card>
+            <Image src={mapImage} alt="map" />
+            <Image src={smileMemojji} alt="smiling memoji" />
+          </Card>
+        </div>
       </div>
     </div>
   );
