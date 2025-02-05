@@ -16,7 +16,7 @@ export const ContactSection = () => {
             <div>
               <h2 className="font-serif text-2xl md:text-3xl">Get in touch</h2>
               <p className="text-sm mt-2 md:text-base">
-                Let's connect and work on awesome projects together
+                Let&apos;s connect and work on awesome projects together
               </p>
             </div>
             <div>
