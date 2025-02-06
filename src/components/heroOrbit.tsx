@@ -6,9 +6,9 @@ export const HeroOrbit = ({
   rotation
 }: PropsWithChildren<{ size: number; rotation: number }>) => {
   return (
-    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ">
+    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-20 ">
       <div
-        className=" size-[800px]"
+        className="flex items-start justify-start animate-spin [animation-duration:10s]"
         style={{
             transform: `rotate(${rotation}deg)`,
           height: `${size}px`,
