@@ -15,9 +15,21 @@ const portfolioProjects = [
     year: "2024",
     title: "Orphanage website",
     results: [
-      { id: 1, title: "Developed Yosa, a full-stack web app with admin-controlled image uploads and dynamic content management." },
-      { id: 2, title: "Integrated Paystack, enabling secure payments and seamless transactions." },
-      { id: 3, title: "Optimized frontend-backend communication, enhancing scalability and user experience." },
+      {
+        id: 1,
+        title:
+          "Developed Yosa, a full-stack web app with admin-controlled image uploads and dynamic content management.",
+      },
+      {
+        id: 2,
+        title:
+          "Integrated Paystack, enabling secure payments and seamless transactions.",
+      },
+      {
+        id: 3,
+        title:
+          "Optimized frontend-backend communication, enhancing scalability and user experience.",
+      },
     ],
     link: "https://yosa.netlify.app/",
     image: YOSA,
@@ -54,12 +66,19 @@ export const ProjectsSection = () => {
   return (
     <section className="pb-16 lg:py-24">
       <div className="container">
-        <SectionHeader eyebrow="Real-world Results" title="Featured Projects" description=" A few of the projects I've worked, both personal and professional" />
+        <SectionHeader
+          eyebrow="Real-world Results"
+          title="Featured Projects"
+          description=" A few of the projects I've worked, both personal and professional"
+        />
         <div className="mt-10 md:mt-20 flex flex-col gap-20">
           {portfolioProjects.map((project) => (
             <Card
               key={project.id} // Updated to use the unique id for the key
               className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
+              style={{
+                top: `calc(64px + ${project.id * 40}px)`,
+              }}
             >
               <div
                 className="absolute inset-0 -z-10 opacity-5"
@@ -80,7 +99,10 @@ export const ProjectsSection = () => {
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
                   <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                     {project.results.map((result) => (
-                      <li key={result.id} className="flex gap-2 text-sm md:text-base text-white/50 ">
+                      <li
+                        key={result.id}
+                        className="flex gap-2 text-sm md:text-base text-white/50 "
+                      >
                         <CheckCircleIcon className="size-5 md:size-6" />
                         <span>{result.title}</span>
                       </li>
