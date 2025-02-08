@@ -1,25 +1,26 @@
+'use client';
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 
 const footerLinks = [
   {
     id: 1,
     title: "LinkedIn",
-    href: "#",
+    href: "https://linkedin.com/in/stanley-boateng/",
   },
   {
     id: 2,
     title: "Twitter",
-    href: "#",
+    href: "https://x.com/Stan_ley45",
   },
   {
     id: 3,
-    title: "Instagram",
-    href: "#",
+    title: "Mail",
+    href: "mailto:stankofb@gmail.com",
   },
   {
     id: 4,
-    title: "Pinterest",
-    href: "#",
+    title: "Github",
+    href: "https://github.com/Stan1-0/",
   },
 ];
 
@@ -32,7 +33,7 @@ export const Footer = () => {
           <div className="text-white/40">&copy; 2025. All rights reserved</div>
           <nav className="flex flex-col md:flex-row items-center gap-8">
             {footerLinks.map((link) => (
-              <a key={link.id} className="inline-flex items-center gap-1.5">
+              <a key={link.id} className="inline-flex items-center gap-1.5" href={link.href} target="_blank" rel="noopener noreferrer">
                 <span className="font-semibold">{link.title}</span>
                 <ArrowUpRightIcon className="size-4" />
               </a>
