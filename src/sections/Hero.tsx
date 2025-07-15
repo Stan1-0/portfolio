@@ -108,10 +108,12 @@ export const HeroSection = () => {
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className=" font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Building Exceptional User Experiences
+            Building Robust systems
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-          I am a junior backend engineer specializing in building efficient, scalable, and secure backend systems. Always eager to tackle new challenges and collaborate on innovative projects
+          Stanley Boateng is an aspiring backend developer currently pursuing a degree in Information Technology at the University of Ghana. Passionate about building practical solutions, Stanley is focused on mastering backend development using Python and Django.
+
+He has worked on several personal and collaborative projects to strengthen his skills and deepen his understanding of scalable backend systems. Stanley’s goal is to become a leading developer who builds impactful, reliable digital systems that solve real-world problems across Africa and beyond.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
