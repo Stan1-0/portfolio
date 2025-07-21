@@ -110,10 +110,11 @@ export const HeroSection = () => {
           <h1 className=" font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
             Building Robust systems
           </h1>
-          <p className="mt-4 text-center text-white/60 md:text-lg">
-          Stanley Boateng is an aspiring backend developer currently pursuing a degree in Information Technology at the University of Ghana. Passionate about building practical solutions, Stanley is focused on mastering backend development using Python and Django.
-
-He has worked on several personal and collaborative projects to strengthen his skills and deepen his understanding of scalable backend systems. Stanley’s goal is to become a leading developer who builds impactful, reliable digital systems that solve real-world problems across Africa and beyond.
+          <p className="mt-4 text-center text-white/70 md:text-lg leading-relaxed">
+            <span className="font-semibold text-emerald-300">Stanley Boateng</span> is a dedicated backend developer currently pursuing a Bachelor’s degree in Information Technology at the University of Ghana.<br /><br />
+            With a strong passion for creating practical and scalable solutions, he specializes in <span className="font-semibold text-emerald-300">Python</span> and <span className="font-semibold text-emerald-300">Django</span>.<br /><br />
+            Stanley has contributed to a variety of personal and collaborative projects, continually enhancing his expertise in building robust digital systems.<br /><br />
+            <span className="italic text-white/80">He aspires to become a leading developer, delivering impactful and reliable technology solutions that address real-world challenges across Africa and beyond.</span>
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
