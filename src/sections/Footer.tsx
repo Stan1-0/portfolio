@@ -5,7 +5,7 @@ const footerLinks = [
   {
     id: 1,
     title: "LinkedIn",
-    href: "https://linkedin.com/in/stanley-boateng/",
+    href: "https://linkedin.com/in/stanley-boateng-",
   },
   {
     id: 2,

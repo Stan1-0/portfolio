@@ -130,6 +130,29 @@ export const AboutSection = () => {
         />
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+            {/* Photo without Card */}
+            <div className="h-[320px] md:col-span-2 lg:col-span-1 flex items-center justify-center">
+              <Image
+                src={require('@/assets/images/Stan.jpg')}
+                alt="My Photo"
+                className="rounded-full object-cover shadow-lg ring-4 ring-emerald-300 w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 transition-transform duration-300 hover:scale-105"
+                style={{ objectPosition: 'center' }}
+              />
+            </div>
+            {/* Bio Card */}
+            <Card className="h-[320px] md:col-span-3 lg:col-span-2 flex flex-col justify-center">
+              <CardHeader
+                title="My Bio"
+                description="Get to know me better"
+                className="px-6 pt-6"
+              />
+              <div className="px-6 pb-6 text-gray-700 text-base">
+                <p>
+                  Hi! I'm Stan, a passionate developer with a love for building impactful digital experiences. I enjoy working with modern web technologies and am always eager to learn and grow. Outside of coding, I enjoy gaming, music, and exploring new ideas.
+                </p>
+              </div>
+            </Card>
+            {/* Existing My reads card */}
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
                 title="My reads"
