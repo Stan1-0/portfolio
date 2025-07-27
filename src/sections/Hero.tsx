@@ -1,3 +1,4 @@
+'use client';
 import memojiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
@@ -6,6 +7,15 @@ import StarIcon from "@/assets/icons/star.svg";
 import { HeroOrbit } from "@/components/heroOrbit";
 
 export const HeroSection = () => {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    if (sectionId === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
@@ -90,7 +100,7 @@ export const HeroSection = () => {
           <StarIcon className="size-28 text-emerald-300" />
         </HeroOrbit>
       </div>
-      <div className="container">
+      <div className="container relative z-10">
         <div className="flex flex-col items-center">
           <Image
             src={memojiImage}
@@ -118,14 +128,21 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+          <a href="/projects" onClick={(e) => scrollToSection(e, 'projects')} className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex items-center border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
-            <span>👋</span>
-            <span className="font-semibold">Let&apos;s connect</span>
-          </button>
+          </a>
+          
+            <a
+              href="https://linkedin.com/in/stanley-boateng-"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center border border-white bg-white text-gray-900 h-12 px-6 rounded-xl"
+            >
+              <span>👋</span>
+              <span className="font-semibold">Let&apos;s connect</span>
+            </a>
+          
         </div>
       </div>
     </div>
