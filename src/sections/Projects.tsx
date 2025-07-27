@@ -44,7 +44,7 @@ const portfolioProjects = [
       { id: 2, title: "Expanded customer reach by 35%" },
       { id: 3, title: "Increased brand awareness by 15%" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "",
     image: lightSaasLandingPage,
   },
   {
@@ -57,7 +57,7 @@ const portfolioProjects = [
       { id: 2, title: "Improved site speed by 50%" },
       { id: 3, title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "",
     image: aiStartupLandingPage,
   },
 ];
