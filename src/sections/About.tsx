@@ -130,7 +130,7 @@ export const AboutSection = () => {
         />
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-            {/* Photo without Card */}
+            
             <div className="h-[320px] md:col-span-2 lg:col-span-1 flex items-center justify-center">
               <Image
                 src={require('@/assets/images/Stan.jpg')}
@@ -139,7 +139,7 @@ export const AboutSection = () => {
                 style={{ objectPosition: 'center' }}
               />
             </div>
-            {/* Bio Card */}
+            
             <Card className="h-[320px] md:col-span-3 lg:col-span-2 flex flex-col justify-center">
               <CardHeader
                 title="My Bio"
@@ -152,7 +152,7 @@ export const AboutSection = () => {
                 </p>
               </div>
             </Card>
-            {/* Existing My reads card */}
+            
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
                 title="My reads"
