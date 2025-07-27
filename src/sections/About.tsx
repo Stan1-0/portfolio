@@ -146,7 +146,7 @@ export const AboutSection = () => {
                 description="Get to know me better"
                 className="px-6 pt-6"
               />
-              <div className="px-6 pb-6 text-gray-700 text-base">
+              <div className="px-6 pb-6 text-gray-100 text-base">
                 <p>
                   Hi! I&apos;m Stan, a passionate backend developer with a love for building impactful digital experiences. I enjoy working with modern web technologies and am always eager to learn and grow. Outside of coding, I enjoy gaming, music, and exploring new ideas.
                 </p>
