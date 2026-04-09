@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import {Inter, Calistoga} from 'next/font/google'
+import { Outfit, Syne } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
+import { MorphBackground } from "@/components/MorphBackground";
 
-const inter = Inter({subsets: ['latin'], variable: '--font-sans'})
-const calistoga = Calistoga({subsets: ['latin'], variable: '--font-serif', weight:'400'})
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-sans" });
+const syne = Syne({ subsets: ["latin"], variable: "--font-serif", weight: ["400", "500", "600", "700", "800"] });
 
 export const metadata: Metadata = {
   title: "Stan's Portfolio",
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={twMerge(inter.variable, calistoga.variable, "bg-gray-900 text-white antialiased font-sans")}>{children}
+      <body className={twMerge(outfit.variable, syne.variable, "bg-transparent text-white antialiased font-sans relative z-0")}>
+        <MorphBackground />
+        {children}
         <Analytics />
       </body>
     </html>
