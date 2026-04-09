@@ -3,6 +3,7 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import { motion } from "framer-motion";
 import { ContactForm } from "@/components/ContactForm";
+import { useState } from "react";
 
 const socialLinks = [
   { id: 1, label: "LinkedIn", href: "https://linkedin.com/in/stanley-boateng-" },
@@ -11,6 +12,14 @@ const socialLinks = [
 ];
 
 export const ContactSection = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("stankofb@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <div className="py-16 pt-12 lg:py-24 lg:pt-20">
       <div className="container">
@@ -50,13 +59,13 @@ export const ContactSection = () => {
             </div>
             <div>
               <button
-                className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900 btn-press hover:bg-gray-800"
-                onClick={() =>
-                  window.open("mailto:stankofb@gmail.com", "_blank", "noopener,noreferrer")
-                }
+                onClick={handleCopyEmail}
+                className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900 btn-press hover:bg-gray-800 transition-all w-48 justify-center"
               >
-                <span className="font-semibold">stankofb@gmail.com</span>
-                <ArrowUpRightIcon className="size-4" />
+                <span className="font-semibold">
+                  {copied ? "Email Copied!" : "stankofb@gmail.com"}
+                </span>
+                {!copied && <ArrowUpRightIcon className="size-4" />}
               </button>
             </div>
           </div>
