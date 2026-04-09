@@ -146,7 +146,7 @@ export const ContactForm = () => {
               exit={{ opacity: 0 }}
               className="text-sm text-emerald-400 font-medium"
             >
-              ✓ Message sent! I'll get back to you soon.
+              ✓ Message sent! I&apos;ll get back to you soon.
             </motion.p>
           )}
           {status === 'error' && (
