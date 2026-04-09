@@ -123,7 +123,7 @@ export const HeroSection = () => {
           <p className="mt-4 text-center text-white/70 md:text-lg leading-relaxed max-w-2xl mx-auto">
             <span className="font-semibold text-emerald-300 glow-text">Stanley Boateng</span> is a forward-thinking software developer currently pursuing a Bachelor’s degree in Information Technology at the University of Ghana.<br /><br />
             While specializing in robust backend systems with <span className="font-semibold text-emerald-300">Python</span> and <span className="font-semibold text-emerald-300">Django</span>, he also crafts modern, highly-responsive frontend experiences.<br /><br />
-            Stanley leverages <span className="font-semibold text-emerald-300">advanced AI tooling</span> to heavily accelerate his productivity—enabling rapid prototyping, high-velocity coding, and lightning-fast shipping of scalable products.<br /><br />
+            Stanley leverages <span className="font-semibold text-emerald-300">advanced AI tooling</span> to heavily accelerate his productivity, enabling rapid prototyping, high-velocity coding, and lightning-fast shipping of scalable products.<br /><br />
             <span className="italic text-white/80">He aspires to become a leading tech visionary, discovering and building reliable solutions that address real-world challenges across Africa and beyond.</span>
           </p>
         </div>
@@ -132,7 +132,7 @@ export const HeroSection = () => {
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />
           </a>
-          
+
           <a
             href="https://drive.google.com/file/d/1EQ-XnH8NCzz8vTXYk4WZb5Oszff2jeD_/view?usp=sharing"
             target="_blank"
