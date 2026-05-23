@@ -63,9 +63,9 @@ const portfolioProjects = [
   },
   {
     id: 3,
-    company: "Agritech Ghana",
+    company: "AgriTech Ghana ",
     year: "2026",
-    title: "Digital Agricultural Marketplace",
+    title: "FarmBridge Africa",
     results: [
       {
         id: 1,
@@ -83,7 +83,7 @@ const portfolioProjects = [
           "Integrated advanced UI animations and seamless page transitions utilizing Framer Motion for a fluid user experience.",
       },
     ],
-    link: "https://agritechgh.me/",
+    link: "https://farmbridgeafrica.com/",
     image: Agritech, // Placeholder — replace with agritech screenshot when available
   },
 ];
