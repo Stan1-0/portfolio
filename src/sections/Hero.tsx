@@ -134,7 +134,7 @@ export const HeroSection = () => {
           </a>
 
           <a
-            href="https://drive.google.com/file/d/1EQ-XnH8NCzz8vTXYk4WZb5Oszff2jeD_/view?usp=sharing"
+            href="https://drive.google.com/file/d/1kaRQ7FJuYaKZUS12EGkbm78EGJ3QShHK/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center border border-emerald-300/30 bg-emerald-300/10 text-emerald-300 h-12 px-6 rounded-xl btn-press"
